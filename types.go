@@ -407,21 +407,21 @@ type SecurityProtocolProperties struct {
 }
 
 type TOPOLOGY struct {
-	DG      int    `json:"DG"`
+	DG      interface{}   `json:"DG"`
 	Arr     interface{} `json:"Arr"`
 	Row     interface{} `json:"Row"`
-	EIDSlot string `json:"EID:Slot"`
-	DID     string `json:"DID"`
-	Type    string `json:"Type"`
-	State   string `json:"State"`
-	BT      string `json:"BT"`
-	Size    string `json:"Size"`
-	PDC     string `json:"PDC"`
-	PI      string `json:"PI"`
-	SED     string `json:"SED"`
-	DS3     string `json:"DS3"`
-	FSpace  string `json:"FSpace"`
-	TR      string `json:"TR"`
+	EIDSlot interface{} `json:"EID:Slot"`
+	DID     interface{} `json:"DID"`
+	Type    interface{} `json:"Type"`
+	State   interface{} `json:"State"`
+	BT      interface{} `json:"BT"`
+	Size    interface{} `json:"Size"`
+	PDC     interface{} `json:"PDC"`
+	PI      interface{} `json:"PI"`
+	SED     interface{} `json:"SED"`
+	DS3     interface{} `json:"DS3"`
+	FSpace  interface{} `json:"FSpace"`
+	TR      interface{} `json:"TR"`
 }
 
 type VDLIST struct {
