@@ -35,8 +35,7 @@ func main() {
 	for i := 0; i < len(pdlist); i++ {
 		fmt.Println("EID:Slot = " + pdlist[i].EIDSlt)
 		fmt.Println("Model = " + pdlist[i].Model)
-		fmt.Println("NAME = " + vdlist[i].Name)
-		fmt.Println("STATE = " + vdlist[i].State)
+		fmt.Println("STATE = " + pdlist[i].State)
 		fmt.Println("--------------------------------")
 	}
 }
