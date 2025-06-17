@@ -35,7 +35,7 @@ func main() {
 
 	pdlist := ctrls.Controller[0].ResponseData.PDLIST
 	for i := 0; i < len(pdlist); i++ {
-		if (vdlist[i].State != "Onln") {
+		if (pdlist[i].State != "Onln") {
 			fmt.Println("Uh oh! Looks like something is wrong with a Physical Drive....")
 			fmt.Println("-------------------------------- Details --------------------------------")
 			fmt.Println("- EID:Slot = " + pdlist[i].EIDSlt)
