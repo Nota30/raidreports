@@ -441,7 +441,7 @@ type PDLIST struct {
 	EIDSlt string `json:"EID:Slt"`
 	DID    int    `json:"DID"`
 	State  string `json:"State"`
-	DG     int    `json:"DG"`
+	DG     interface{}    `json:"DG"`
 	Size   string `json:"Size"`
 	Intf   string `json:"Intf"`
 	Med    string `json:"Med"`
