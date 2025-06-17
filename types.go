@@ -408,7 +408,7 @@ type SecurityProtocolProperties struct {
 
 type TOPOLOGY struct {
 	DG      int    `json:"DG"`
-	Arr     string `json:"Arr"`
+	Arr     interface{} `json:"Arr"`
 	Row     string `json:"Row"`
 	EIDSlot string `json:"EID:Slot"`
 	DID     string `json:"DID"`
