@@ -1,4 +1,4 @@
-package raidreports
+package main
 
 import (
 	"encoding/json"
