@@ -50,9 +50,10 @@ func main() {
 		}
 	}
 
+	mailstring = "\"" + mailstring + "\""
 	fmt.Println(mailstring)
-
-	out, err = exec.Command("echo", mailstring, "|", "mail", "-s", "\"csci-nas-02 raid status\"", "root@localhost").Output()
+	
+	out, err = exec.Command("mail", "-s", "\"csci-nas-02 raid status\"", "root@localhost", "<<<", mailstring).Output()
 	if err != nil {
 		log.Fatal(err)
 	}
