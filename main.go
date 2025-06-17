@@ -23,7 +23,6 @@ func main() {
 	var mailstring string
 
 	vdlist := ctrls.Controller[0].ResponseData.VDLIST
-	vdlist[0].State = "TEST"
 	for i := 0; i < len(vdlist); i++ {
 		if (vdlist[i].State != "Optl") {
 			mailstring = mailstring + "\nUh oh! Looks like something is wrong with a Virtual Drive...." + 
