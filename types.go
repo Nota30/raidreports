@@ -410,10 +410,10 @@ type TOPOLOGY struct {
 	DG      interface{}   `json:"DG"`
 	Arr     interface{} `json:"Arr"`
 	Row     interface{} `json:"Row"`
-	EIDSlot interface{} `json:"EID:Slot"`
+	EIDSlot string `json:"EID:Slot"`
 	DID     interface{} `json:"DID"`
-	Type    interface{} `json:"Type"`
-	State   interface{} `json:"State"`
+	Type    string `json:"Type"`
+	State   string `json:"State"`
 	BT      interface{} `json:"BT"`
 	Size    interface{} `json:"Size"`
 	PDC     interface{} `json:"PDC"`
