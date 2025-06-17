@@ -51,4 +51,11 @@ func main() {
 	}
 
 	fmt.Println(mailstring)
+
+	out, err = exec.Command("mail", "-s", "'csci-nas-02 raid status'", "root@localhost").Output()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(out)
 }
