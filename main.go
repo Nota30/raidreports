@@ -20,5 +20,12 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(ctrls.Controller[0].ResponseData.VDLIST)
+	vdlist := ctrls.Controller[0].ResponseData.VDLIST
+	for i := 0; i < len(vdlist); i++ {
+		fmt.Println(vdlist[i].DGVD)
+		fmt.Println(vdlist[i].TYPE)
+		fmt.Println(vdlist[i].Name)
+		fmt.Println(vdlist[i].State)
+		fmt.Println("--------------------------------")
+	}
 }
