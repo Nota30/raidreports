@@ -21,21 +21,27 @@ func main() {
 	}
 
 	vdlist := ctrls.Controller[0].ResponseData.VDLIST
-	fmt.Println("----------- VD LIST -----------")
 	for i := 0; i < len(vdlist); i++ {
-		fmt.Println("DG/VD = " + vdlist[i].DGVD)
-		fmt.Println("TYPE = " + vdlist[i].TYPE)
-		fmt.Println("NAME = " + vdlist[i].Name)
-		fmt.Println("STATE = " + vdlist[i].State)
-		fmt.Println("--------------------------------")
+		if (vdlist[i].State != "Optl") {
+			fmt.Println("Uh oh! Looks like something is wrong with a Virtual Drive....")
+			fmt.Println("-------------------------------- Details --------------------------------")
+			fmt.Println("- DG/VD = " + vdlist[i].DGVD)
+			fmt.Println("- TYPE = " + vdlist[i].TYPE)
+			fmt.Println("- NAME = " + vdlist[i].Name)
+			fmt.Println("- STATE = " + vdlist[i].State)
+			fmt.Println("----------------------------------------------------------------")
+		}
 	}
 
 	pdlist := ctrls.Controller[0].ResponseData.PDLIST
-	fmt.Println("----------- PD LIST -----------")
 	for i := 0; i < len(pdlist); i++ {
-		fmt.Println("EID:Slot = " + pdlist[i].EIDSlt)
-		fmt.Println("Model = " + pdlist[i].Model)
-		fmt.Println("STATE = " + pdlist[i].State)
-		fmt.Println("--------------------------------")
+		if (vdlist[i].State != "Onln") {
+			fmt.Println("Uh oh! Looks like something is wrong with a Physical Drive....")
+			fmt.Println("-------------------------------- Details --------------------------------")
+			fmt.Println("- EID:Slot = " + pdlist[i].EIDSlt)
+			fmt.Println("- Model = " + pdlist[i].Model)
+			fmt.Println("- STATE = " + pdlist[i].State)
+			fmt.Println("----------------------------------------------------------------")
+		}
 	}
 }
