@@ -22,10 +22,10 @@ func main() {
 
 	vdlist := ctrls.Controller[0].ResponseData.VDLIST
 	for i := 0; i < len(vdlist); i++ {
-		fmt.Println(vdlist[i].DGVD)
-		fmt.Println(vdlist[i].TYPE)
-		fmt.Println(vdlist[i].Name)
-		fmt.Println(vdlist[i].State)
+		fmt.Println("DG/VD = " + vdlist[i].DGVD)
+		fmt.Println("TYPE = " + vdlist[i].TYPE)
+		fmt.Println("NAME = " + vdlist[i].Name)
+		fmt.Println("STATE = " + vdlist[i].State)
 		fmt.Println("--------------------------------")
 	}
 }
