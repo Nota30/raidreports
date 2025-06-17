@@ -20,5 +20,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(ctrls)
+	fmt.Println(ctrls.Controller[0].ResponseData.VDLIST)
 }
