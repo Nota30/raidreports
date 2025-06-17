@@ -1,4 +1,4 @@
-package main
+package raidreports
 
 type Controllers struct {
 	Controller []Controller `json:"Controllers"`
