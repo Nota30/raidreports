@@ -23,8 +23,6 @@ func main() {
 	var mailstring string
 
 	vdlist := ctrls.Controller[0].ResponseData.VDLIST
-	vdlist[0].State = "Test"
-	vdlist[1].State = "Test"
 	for i := 0; i < len(vdlist); i++ {
 		if (vdlist[i].State != "Optl") {
 			mailstring = mailstring + "\nUh oh! Looks like something is wrong with a Virtual Drive...." + 
@@ -40,7 +38,7 @@ func main() {
 
 	pdlist := ctrls.Controller[0].ResponseData.PDLIST
 	for i := 0; i < len(pdlist); i++ {
-		if (pdlist[i].State != "Onln") {
+		if (pdlist[i].State != "Onln" && pdlist[i].State != "DHS") {
 			mailstring = mailstring + "\nUh oh! Looks like something is wrong with a Physical Drive...." +
 			"\n-------------------------------- Details --------------------------------" +
 			"\n- EID:Slot = " + pdlist[i].EIDSlt +
@@ -50,13 +48,5 @@ func main() {
 		}
 	}
 
-	mailstring = "\"" + mailstring + "\""
 	fmt.Println(mailstring)
-	
-	out, err = exec.Command("mail", "-s", "\"csci-nas-02 raid status\"", "root@localhost", "<<<", mailstring).Output()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Println(string(out))
 }
