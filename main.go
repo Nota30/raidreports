@@ -38,7 +38,7 @@ func main() {
 
 	pdlist := ctrls.Controller[0].ResponseData.PDLIST
 	for i := 0; i < len(pdlist); i++ {
-		if (pdlist[i].State != "Onln" && pdlist[i].State != "DHS") {
+		if (pdlist[i].State != "Onln" && pdlist[i].State != "DHS" && vdlist[i].State != "GHS") {
 			mailstring = mailstring + "\nUh oh! Looks like something is wrong with a Physical Drive...." +
 			"\n-------------------------------- Details --------------------------------" +
 			"\n- EID:Slot = " + pdlist[i].EIDSlt +
