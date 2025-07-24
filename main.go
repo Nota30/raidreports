@@ -24,7 +24,7 @@ func main() {
 
 	vdlist := ctrls.Controller[0].ResponseData.VDLIST
 	for i := 0; i < len(vdlist); i++ {
-		if (vdlist[i].State != "Optl") {
+		if (vdlist[i].State != "Optl" || vdlist[i].State != "GHS") {
 			mailstring = mailstring + "\nUh oh! Looks like something is wrong with a Virtual Drive...." + 
 			"\n-------------------------------- Details --------------------------------" +
 			"\n- DG/VD = " + vdlist[i].DGVD +
